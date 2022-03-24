@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { tagsListSelector } from "../../store/selectors/tagsList";
 import Tag from "../Tag";
-import {  getTags } from "../../store/actions";
+import { getTags } from "../../store/actions";
 import { TagsContainer } from "./styled";
 
 const TagList = () => {
@@ -11,6 +11,7 @@ const TagList = () => {
 
   useEffect(() => {
     dispatch(getTags());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   if (tags.length < 1) {

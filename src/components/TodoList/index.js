@@ -13,6 +13,7 @@ const TodosList = () => {
   const { isSearchTagActive } = useSelector(tagsListSelector);
   useEffect(() => {
     dispatch(getTodos());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const renderTodos = (todos) => {
